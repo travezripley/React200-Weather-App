@@ -7,6 +7,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="container">
+      <div className="jumbotron">
+
         <div
           style={{
             backgroundColor: "grey",
