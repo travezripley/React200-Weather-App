@@ -8,29 +8,26 @@ export default class App extends React.Component {
     return (
       <div className="container">
         <div className="jumbotron">
-          <div
-            style={{
-              backgroundColor: "grey",
-              padding: "20px",
-              marginTop: "20px"
-            }}
-          >
-            <h1>Travy's Weather App</h1>
-            <h4>It's too hot for pants!</h4>
-          </div>
-
-          <Search />
-
-          <div className="row">
-            <div className="col-md-7">
-              <CityInformation />
-            </div>
-
-            <div className="col-md-5">
-              <SearchHistory />
-            </div>
-          </div>
+          <h1 className="display-4">Travy's Weather App</h1>
+          <p className="lead">It's too hot for pants!</p>
         </div>
+        {/* Search component below */}
+        <Search />
+        {/* City Info box start below */}
+        <div className="row">
+          <div className="col-12 col-md-6 mb-4">
+            {/* Component break start below */}
+            <CityInformation />
+            {/* closing CITY INFO div below */}
+          </div>
+          {/* Search History box start below */}
+          <div className="col-12 col-md-6 mb-4">
+            <SearchHistory />
+          </div>
+          {/* Search History box end above */}
+          {/* closing row div for CITY INFO and SEARCH HISTORY below */}
+        </div>
+        {/* closing container div below */}
       </div>
     );
   }
