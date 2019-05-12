@@ -1,7 +1,8 @@
-import { connect } from 'react-redux';
-import Search from './Search';
+import { connect } from "react-redux";
+import Search from "./Search";
 
 function mapStoreToProps(store) {
-    return {
+  return {};
+}
 
 export default connect(mapStoreToProps)(Search);
