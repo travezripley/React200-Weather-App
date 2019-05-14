@@ -35,7 +35,7 @@ export default class CityInformation extends React.Component {
                       <img
                         height="50px"
                         width="50px"
-                        src="http://openweathermap.org/img/w/o1d.png"
+                        src="http://openweathermap.org/img/w/01d.png"
                         alt="weather graphic"
                       />
                     </span>
