@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 
 function SearchHistory(props) {
-  let searchHist = props.history.map(data => {
+  var searchHist = props.history.map(data => {
     return (
-      <li className="list-group-item" key={date.time}>
-        {data.searchedCity}, {data.date}, {date.time}
+      <li className="list-group-item" key={data.time}>
+        {data.searchedCity}, {data.date}, {data.time}
       </li>
     );
   });
