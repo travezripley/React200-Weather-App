@@ -24,20 +24,20 @@ export default function searchReducer(state = initialState, action) {
     case "GET_WEATHER": {
       return {
         ...state,
-        searchedCity: payload.data.name,
-        lat: payload.data.coord.lat,
-        lon: payload.data.coord.lon,
-        temp: payload.data.main.temp.toFixed(0),
-        pressure: payload.data.main.pressure,
-        humidity: payload.data.main.humidity,
-        lowTemp: payload.data.main.temp_min.toFixed(0),
-        highTemp: payload.data.main.temp_max.toFixed(0),
-        wind: payload.data.wind.speed,
-        icon: payload.data.weather[0].icon,
+        searchedCity: payload.name,
+        lat: payload.coord.lat,
+        lon: payload.coord.lon,
+        temp: payload.main.temp.toFixed(0),
+        pressure: payload.main.pressure,
+        humidity: payload.main.humidity,
+        lowTemp: payload.main.temp_min.toFixed(0),
+        highTemp: payload.main.temp_max.toFixed(0),
+        wind: payload.wind.speed,
+        icon: payload.weather[0].icon,
         error: false,
         history: [
           ...state.history,
-          { searchedCity: payload.data.name, date: moment().format('l'), time: moment().format("h:mm:ss a") }
+          { searchedCity: payload.name, date: moment().format('l'), time: moment().format("h:mm:ss a") }
         ]
       }
     }
