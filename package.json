@@ -11,7 +11,7 @@
     "test": "npm run build && mocha test/.setup.js test/*.spec.js --exit"
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.19.0",
     "babel": "^6.3.26",
     "babel-loader": "^7.1.1",
     "babel-preset-airbnb": "^1.0.1",
@@ -24,10 +24,10 @@
     "express": "^4.15.3",
     "fs": "0.0.1-security",
     "json-loader": "^0.5.4",
-    "lodash": "^4.15.0",
+    "lodash": "^4.17.14",
     "lodash-webpack-plugin": "^0.10.2",
     "moment": "^2.24.0",
-    "morgan": "^1.8.1",
+    "morgan": "^1.9.1",
     "nightmare": "^3.0.1",
     "nodemon": "^1.19.0",
     "prop-types": "^15.5.10",
@@ -41,7 +41,7 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "@webpack-cli/update": "^0.1.5",
+    "@webpack-cli/update": "^0.1.8",
     "axios-mock-adapter": "^1.6.1",
     "chai-as-promised": "^5.3.0",
     "chai-http": "^4.2.0",
