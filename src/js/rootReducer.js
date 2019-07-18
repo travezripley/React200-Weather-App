@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import searchReducer from "./reducers/searchReducer";
+import { combineReducers } from 'redux';
+import searchReducer from './reducers/searchReducer';
 
 export const rootReducer = combineReducers({
   data: searchReducer

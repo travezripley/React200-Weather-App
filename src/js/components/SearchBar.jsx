@@ -1,10 +1,12 @@
-import React from "react";
-import { connect } from "react-redux";
-import { getWeather } from "../actions/weather_Action.js";
+import React from 'react';
+
+import { connect } from 'react-redux';
+import { getWeather } from '../actions/weather_Action.js';
 
 class Search extends React.Component {
   constructor(props) {
-    super(props);
+		super(props);
+		
     this.state = {
       city: ''
     };
@@ -28,64 +30,64 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: "20px", marginBottom: "20px" }}>
-        <div className="btn-group" role="group">
+      <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+        <div className='btn-group' role='group'>
           <button
-            type="button"
-            className="btn-primary"
+            type='button'
+            className='btn-primary'
             onClick={this.handleClick}
-            name="San Diego"
+            name='San Diego'
           >
             San Diego
           </button>
           <button
-            type="button"
-            className="btn-primary"
+            type='button'
+            className='btn-primary'
             onClick={this.handleClick}
-            name="Los Angeles"
+            name='Los Angeles'
           >
             Los Angeles
           </button>
           <button
-            type="button"
-            className="btn-primary"
+            type='button'
+            className='btn-primary'
             onClick={this.handleClick}
-            name="San Francisco"
+            name='San Francisco'
           >
             San Francisco
           </button>
           <button
-            type="button"
-            className="btn-primary"
+            type='button'
+            className='btn-primary'
             onClick={this.handleClick}
-            name="New York"
+            name='New York'
           >
             New York
           </button>
           <button
-            type="button"
-            className="btn-primary"
+            type='button'
+            className='btn-primary'
             onClick={this.handleClick}
-            name="Boston"
+            name='Boston'
           >
             Boston
           </button>
         </div>
 
-        <div className="form-group">
+        <div className='form-group'>
           <input
-            type="city"
-            className="form-control"
-            id="searchForm"
-            placeholder="Enter City"
+            type='city'
+            className='form-control'
+            id='searchForm'
+            placeholder='Enter City'
             value={this.state.city}
             onChange={this.handleChange}
           />
           <button
-            className="btn btn-primary"
+            className='btn btn-primary'
             onClick={() => this.handleSubmit()}
           >
-            Get The Weather{" "}
+            Get The Weather{' '}
           </button>
         </div>
       </div>

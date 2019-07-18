@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment from 'moment';
 
 const initialState = {
   lat: null,
@@ -9,10 +9,10 @@ const initialState = {
   lowTemp: 0,
   highTemp: 0,
   wind: 0,
-  searchInput: "",
-  searchedCity: "Enter a city",
+  searchInput: '',
+  searchedCity: 'Enter a city',
   history: [],
-  icon: "01d",
+  icon: '01d',
   error: false
 };
 
@@ -20,8 +20,7 @@ export default function searchReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-
-    case "GET_WEATHER": {
+    case 'GET_WEATHER': {
       return {
         ...state,
         searchedCity: payload.name,
@@ -37,12 +36,15 @@ export default function searchReducer(state = initialState, action) {
         error: false,
         history: [
           ...state.history,
-          { searchedCity: payload.name, date: moment().format('l'), time: moment().format("h:mm:ss a") }
+          { searchedCity: payload.name, 
+            date: moment().format('l'), 
+            time: moment().format('h:mm:ss a')
+          }
         ]
       }
     }
 
-    case "GET_WEATHER_FAIL": {
+    case 'GET_WEATHER_FAIL': {
       return {
         ...state,
         error: true
